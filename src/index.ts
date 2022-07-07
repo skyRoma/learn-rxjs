@@ -1,10 +1,7 @@
-import { Observable } from 'rxjs';
+import { part1 } from './1';
+import { part2 } from './2';
+import { part3 } from './3';
 
-const someObservable$ = new Observable<string>((subscriber) => {
-  subscriber.next('Alice');
-  subscriber.next('Ben');
-  subscriber.next('Charlie');
-  subscriber.complete();
-});
-
-someObservable$.subscribe((value) => console.log(value));
+part1();
+part2();
+part3();
