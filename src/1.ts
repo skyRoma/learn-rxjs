@@ -1,1 +1,46 @@
-export function part1() {}
+import { Observable, Observer } from 'rxjs';
+
+export function part1() {
+  const observable$ = new Observable<number>((subscriber) => {
+    console.log(1);
+    subscriber.next(2);
+
+    setTimeout(() => {
+      subscriber.next(3);
+    }, 1000);
+
+    setTimeout(() => {
+      subscriber.error(new Error('Failure'));
+    }, 2000);
+
+    setTimeout(() => {
+      subscriber.next(4);
+    }, 3000);
+
+    return () => {
+      console.log('teardown');
+    };
+  });
+
+  const observer: Observer<number> = {
+    next: (value) => {
+      console.log('next: ', value);
+    },
+    error: (error) => {
+      console.log('error: ', error.message);
+    },
+    complete: () => {
+      console.log('complete');
+    },
+  };
+
+  console.log('before subscribe');
+  const subscription = observable$.subscribe(observer);
+  observable$.subscribe(observer);
+  console.log('after subscribe');
+
+  setTimeout(() => {
+    console.log('unsubscribe');
+    subscription.unsubscribe();
+  }, 4000);
+}

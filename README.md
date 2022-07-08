@@ -6,3 +6,27 @@
 4. Open the Console/DevTools in your browser to see the `console.log`s.
 5. Keep modifying the `src/index.html` and `src/index.ts` files to adjust the code you want to run. **Saving these files will automatically reload the page.**
 6. Enjoy!
+
+- ```ts
+  const observable$ = new Observable<number>((subscriber) => {
+    subscriber.next(2);
+    subscriber.error(new Error());
+    subscriber.complete();
+  });
+
+  const observer: Observer<number> = {
+    next: (value) => {
+      console.log('next: ', value);
+    },
+    error: (error) => {
+      console.log('error: ', error);
+    },
+    complete: () => {
+      console.log('complete');
+    },
+  };
+
+  const subscription = observable$.subscribe(observer);
+  ```
+
+  `subscriber` is a wrapper for `observer` with additional useful logic.
