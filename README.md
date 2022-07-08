@@ -29,4 +29,9 @@
   const subscription = observable$.subscribe(observer);
   ```
 
-  `subscriber` is a wrapper for `observer` with additional useful logic.
+  `subscriber` is a wrapper for `observer` with additional useful logic;
+
+- Cold observable for each new subscription produced a new set of values inside this observable.
+  Hot observables connect to the common shared source of values (e.g. Dom events).
+  A cold observable starts producing data when some code invokes a `subscribe()` function on it.
+  A hot observable produces data even if you are not subscribed;
