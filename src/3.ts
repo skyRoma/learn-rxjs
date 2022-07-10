@@ -1,6 +1,6 @@
 import { ajax } from 'rxjs/ajax';
 
-// Cold observable
+// cold observable
 export function part3() {
   const ajax$ = ajax<{ first_name: string }>(
     'https://random-data-api.com/api/name/random_name'

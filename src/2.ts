@@ -1,4 +1,5 @@
-import { observable, Observable, Observer } from 'rxjs';
+import { Observable } from 'rxjs';
+import { observer } from './helpers';
 
 export function part2() {
   const observable$ = new Observable<number>((subscriber) => {
@@ -14,14 +15,6 @@ export function part2() {
       clearInterval(intervalId);
     };
   });
-
-  const observer: Observer<number> = {
-    next: (value) => {
-      console.log(value);
-    },
-    error: () => {},
-    complete: () => {},
-  };
 
   const subscription = observable$.subscribe(observer);
 

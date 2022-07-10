@@ -1,4 +1,5 @@
-import { Observable, Observer } from 'rxjs';
+import { Observable } from 'rxjs';
+import { observer } from './helpers';
 
 export function part1() {
   const observable$ = new Observable<number>((subscriber) => {
@@ -21,18 +22,6 @@ export function part1() {
       console.log('teardown');
     };
   });
-
-  const observer: Observer<number> = {
-    next: (value) => {
-      console.log('next: ', value);
-    },
-    error: (error) => {
-      console.log('error: ', error.message);
-    },
-    complete: () => {
-      console.log('complete');
-    },
-  };
 
   console.log('before subscribe');
   const subscription = observable$.subscribe(observer);
