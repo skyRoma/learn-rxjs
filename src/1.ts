@@ -11,7 +11,7 @@ export function part1() {
     }, 1000);
 
     setTimeout(() => {
-      subscriber.error(new Error('Failure'));
+      subscriber.error(new Error('failure'));
     }, 2000);
 
     setTimeout(() => {
