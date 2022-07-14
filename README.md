@@ -35,3 +35,7 @@
   Hot observables connect to the outside common shared source of values (e.g. Dom events).
   A cold observable starts producing data when some code invokes a `subscribe()` function on it.
   A hot observable produces data even if you are not subscribed;
+- `pipe()` just creates a new Observable with some additional logic on top of the original
+  observable;
+- We can pass observer object inside `tap` operator to log `error` or `complete` notifications together
+  with `next`;

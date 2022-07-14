@@ -8,6 +8,7 @@ import { part7 } from './7';
 import { part8 } from './8';
 import { part9 } from './9';
 import { part10 } from './10';
+import { part11 } from './11';
 
 // part1();
 // part2();
@@ -18,4 +19,5 @@ import { part10 } from './10';
 // part7();
 // part8();
 // part9();
-part10();
+// part10();
+part11();
