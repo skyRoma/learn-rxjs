@@ -39,3 +39,8 @@
   observable;
 - We can pass observer object inside `tap` operator to log `error` or `complete` notifications together
   with `next`;
+- `catchError` handles errors, but skip all other events to the resulting observable.
+  If the source observable terminates with an error, it will map that error to a new observable,
+  subscribe to it, and forward all of its events to the resulting observable.
+- `EMPTY` - a simple Observable that emits no items to the Observer and immediately emits a
+  complete notification.
