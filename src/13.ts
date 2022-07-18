@@ -25,5 +25,5 @@ export function part13() {
   setTimeout(() => {
     console.log('merge map');
     mergeMapObservable.subscribe(observer);
-  }, 10000);
+  }, 17000);
 }

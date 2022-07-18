@@ -12,6 +12,7 @@ import { part11 } from './11';
 import { part12 } from './12';
 import { part13 } from './13';
 import { part14 } from './14';
+import { part15 } from './15';
 
 // part1();
 // part2();
@@ -26,4 +27,5 @@ import { part14 } from './14';
 // part11();
 // part12();
 // part13();
-part14();
+// part14();
+part15();

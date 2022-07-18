@@ -1,4 +1,4 @@
-import { concatMap, map, Observable, Subscription } from 'rxjs';
+import { concatMap, map, Observable } from 'rxjs';
 import {
   frameworkTweetsObservable,
   getRecruitsObservable,
