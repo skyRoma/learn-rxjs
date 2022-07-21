@@ -1,5 +1,5 @@
 import { from } from 'rxjs';
-import { observer } from './helpers';
+import { observer } from '../helpers';
 
 // creation functions: from
 export function part6() {

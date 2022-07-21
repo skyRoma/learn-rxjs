@@ -1,5 +1,5 @@
 import { Observable, timer } from 'rxjs';
-import { observer } from './helpers';
+import { observer } from '../helpers';
 
 // creation functions: timer
 export function part8() {

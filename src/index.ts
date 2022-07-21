@@ -1,19 +1,18 @@
 import { part1 } from './1';
+import { part11 } from './11';
+import { part12 } from './12';
 import { part2 } from './2';
 import { part3 } from './3';
 import { part4 } from './4';
-import { part5 } from './5';
-import { part6 } from './6';
-import { part7 } from './7';
-import { part8 } from './8';
-import { part9 } from './9';
-import { part10 } from './10';
-import { part11 } from './11';
-import { part12 } from './12';
-import { part13 } from './13';
-import { part14 } from './14';
-import { part15 } from './15';
-import { part16 } from './16';
+import {
+  part5,
+  part6,
+  part7,
+  part8,
+  part9,
+  part10,
+} from './creation functions';
+import { part13, part14, part15, part16 } from './flattening operators';
 
 // part1();
 // part2();

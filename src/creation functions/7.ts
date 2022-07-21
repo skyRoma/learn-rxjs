@@ -1,5 +1,5 @@
 import { fromEvent } from 'rxjs';
-import { observer } from './helpers';
+import { observer } from '../helpers';
 
 // creation functions: fromEvent
 export function part7() {

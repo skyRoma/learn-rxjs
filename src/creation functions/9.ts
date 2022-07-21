@@ -1,6 +1,6 @@
 import { forkJoin, map, Observable } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { observer } from './helpers';
+import { observer } from '../helpers';
 
 // creation functions: forkJoin
 export function part9() {
