@@ -12,7 +12,7 @@ import {
   part9,
   part10,
 } from './creation functions';
-import { part13, part14, part15, part16 } from './flattening operators';
+import { part13, part14, part15, part16, part17 } from './flattening operators';
 
 // part1();
 // part2();
@@ -29,4 +29,5 @@ import { part13, part14, part15, part16 } from './flattening operators';
 // part13();
 // part14();
 // part15();
-part16();
+// part16();
+part17();
