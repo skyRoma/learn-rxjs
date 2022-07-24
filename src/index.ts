@@ -20,6 +20,7 @@ import {
   part17,
   part18,
   part19,
+  part20,
 } from './flattening operators';
 
 // part1();
@@ -40,4 +41,5 @@ import {
 // part16();
 // part17();
 // part18();
-part19();
+// part19();
+part20();
