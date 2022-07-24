@@ -44,7 +44,6 @@ export function part14() {
         ...observer,
         complete: () => {
           queue[i].completed = true;
-
           checkNext(i + 1);
         },
       });

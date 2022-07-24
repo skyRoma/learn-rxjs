@@ -1,4 +1,19 @@
-import { concatMap, delay, interval, map, Observer, of, take, tap } from 'rxjs';
+import {
+  concatMap,
+  delay,
+  interval,
+  map,
+  Observable,
+  Observer,
+  of,
+  take,
+  tap,
+} from 'rxjs';
+
+export interface ConcatQueueItem {
+  obs$: Observable<any>;
+  completed: boolean;
+}
 
 export const observer: Observer<any> = {
   next: (value) => {

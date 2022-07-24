@@ -11,14 +11,14 @@ export function part17() {
     return (source$: Observable<T>) =>
       new Observable<T>((subscriber) => {
         let sourceCompleted = false;
-        let innerCounter = 0;
+        let innerSubscriptionCounter = 0;
 
         const subscription = new Subscription();
 
         subscription.add(
           source$.subscribe({
             next: (value) => {
-              innerCounter++;
+              innerSubscriptionCounter++;
 
               subscription.add(
                 fn(value).subscribe({
@@ -27,9 +27,9 @@ export function part17() {
                   },
                   error: (err) => subscriber.error(err),
                   complete: () => {
-                    innerCounter--;
+                    innerSubscriptionCounter--;
 
-                    if (sourceCompleted && !innerCounter) {
+                    if (sourceCompleted && !innerSubscriptionCounter) {
                       subscriber.complete();
                     }
                   },
