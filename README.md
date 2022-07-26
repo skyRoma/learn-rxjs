@@ -31,16 +31,16 @@
 
   `subscriber` is a wrapper for `observer` with additional useful logic;
 
-- Cold observable for each new subscription produced a new set of values inside this observable.
-  Hot observables connect to the outside common shared source of values (e.g. Dom events).
+- `Cold` observable for each new subscription produced a new set of values inside this observable.
+  `Hot` observables connect to the outside common shared source of values (e.g. Dom events).
   A cold observable starts producing data when some code invokes a `subscribe()` function on it.
   A hot observable produces data even if you are not subscribed;
 - `pipe()` just creates a new Observable with some additional logic on top of the original
   observable;
-- We can pass observer object inside `tap` operator to log `error` or `complete` notifications together
-  with `next`;
+- We can pass observer object inside `tap` operator to log `error` or `complete` notifications together with `next`;
 - `catchError` handles errors, but skip all other events to the resulting observable.
   If the source observable terminates with an error, it will map that error to a new observable,
-  subscribe to it, and forward all of its events to the resulting observable.
+  subscribe to it, and forward all of its events to the resulting observable;
 - `EMPTY` - a simple Observable that emits no items to the Observer and immediately emits a
-  complete notification.
+  complete notification;
+- Every `Subject` is an `Observable` and `Observer`.
